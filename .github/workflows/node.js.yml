@@ -23,6 +23,8 @@ jobs:
       with:
         node-version: '16.13.1'
         cache: 'npm'
+    - name: Install chrome headless dependancies
+      run: sudo apt-get install libatk1.0-0
     - run: npm i
     - run: npm run build --if-present
     - run: npm run test-prod
